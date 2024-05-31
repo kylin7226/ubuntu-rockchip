@@ -1,8 +1,11 @@
 name: Nightly
 run-name: Nightly build
 on:
-  schedule:
-    - cron: "0 0 * * *"
+   push:
+     branches:
+       - main
+     paths:
+       - 'date'
 
 jobs:
   rootfs:
